@@ -52,7 +52,15 @@ def get_output_media(audio_file_path, timed_captions, background_video_data, vid
     audio_clips.append(audio_file_clip)
 
     for (t1, t2), text in timed_captions:
-        text_clip = TextClip(txt=text, fontsize=100, color="white", stroke_width=3, stroke_color="black", method="label")
+        text_clip = TextClip(
+        txt=text,
+        font='Montserrat',
+        fontsize=100,
+        color="#7BA8B6",  # A soft, calming blue
+        bg_color="#F0EAD6",  # A warm, relaxing beige
+        stroke_width=3,
+        stroke_color="black",  # Changed to black for the border
+        method="label")
         text_clip = text_clip.set_start(t1)
         text_clip = text_clip.set_end(t2)
         text_clip = text_clip.set_position(["center", 800])
