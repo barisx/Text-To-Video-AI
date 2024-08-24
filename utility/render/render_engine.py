@@ -55,10 +55,10 @@ def get_output_media(audio_file_path, timed_captions, background_video_data, vid
         text_clip = TextClip(
         txt=text,
         font='Montserrat',
-        fontsize=100,
+        fontsize=300,
         color="#7BA8B6",  # A soft, calming blue
         bg_color="#F0EAD6",  # A warm, relaxing beige
-        stroke_width=3,
+        stroke_width=5,
         stroke_color="black",  # Changed to black for the border
         method="label")
         text_clip = text_clip.set_start(t1)
